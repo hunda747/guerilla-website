@@ -1,7 +1,11 @@
 @import "./styles/global.scss";
 
 :root {
-  font-family: $poppins;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Roboto", sans-serif;
+  // font-family: $poppins;
   line-height: 1.5;
   font-weight: 400;
 
