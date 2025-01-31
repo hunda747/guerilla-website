@@ -39,14 +39,15 @@ $spacing-lg: 32px;
 
 //fonts
 $heroFont: clamp(3rem, 5vw, 6rem);
-$headerFont: clamp(2.5rem, 5vw, 4rem);
-$headerFont-sm: clamp(36px, 4vw, 48px);
-$subHeaderFont: clamp(1.2rem, 2vw, 1.5rem);
-$descriptionFont: clamp(1rem, 1.5vw, 1.2rem);
+$headerFont: clamp(2.5rem, 5vw, 3rem);
+$headerFont-sm: clamp(26px, 4vw, 36px);
+$subHeaderFont: clamp(1rem, 2vw, 1.3rem);
+$descriptionFont: clamp(0.8rem, 1.5vw, 1rem);
+$bigDescriptionFont: clamp(1rem, 1.5vw, 1.2rem);
 
-$smallHeaderFont: clamp(1.5rem, 2vw, 2rem);
-$paragraphFont: clamp(1rem, 1.5vw, 1.2rem);
-$iconFontSize: clamp(6rem, 2vw, 8rem);
+$smallHeaderFont: clamp(1.2rem, 2vw, 1.6rem);
+$paragraphFont: clamp(0.8rem, 1.5vw, 1rem);
+$iconFontSize: clamp(4rem, 2vw, 7rem);
 
 //border radius
 $borderRadius: 12px;

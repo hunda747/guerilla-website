@@ -21,11 +21,12 @@
 
   .get-started {
     background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid $primary-text;
+    color: $primary-text;
+    transition: background-color 0.3s;
 
     &:hover {
-      background-color: #fff;
+      background-color: $primary-text;
       color: $dark;
     }
   }

@@ -31,13 +31,13 @@
       line-height: $heroFont;
       font-weight: 600;
       margin: 0;
-      font-family: $oswald;
+      font-family: $roboto;
       text-transform: uppercase;
     }
 
     p {
-      font-size: 1.4rem;
-      line-height: 1.4rem;
+      font-size: $bigDescriptionFont;
+      line-height: $bigDescriptionFont;
       max-width: 400px;
       margin: 0;
       font-family: $poppins;

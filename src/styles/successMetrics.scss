@@ -12,13 +12,12 @@ $background-color: #F8F9FA;
   justify-content: center;
   padding: $sectionPaddingHigh 0;
 
-
   .header-container {
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 0rem;
+    gap: 2rem;
 
     .section-title {
       font-size: $headerFont-sm;
@@ -92,7 +91,6 @@ $background-color: #F8F9FA;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
-
       gap: 2rem;
 
       h2 {

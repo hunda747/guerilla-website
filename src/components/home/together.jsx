@@ -4,6 +4,7 @@ import '../../styles/together.scss';
 
 import togetherImage from '../../assets/images/gorilla1.png';
 import CTA from '../cta';
+import { Reveal } from '../reveal';
 
 const Together = () => {
   const ref = useRef(null);
@@ -17,14 +18,16 @@ const Together = () => {
         animate={isInView ? { x: 0 } : {}}
         transition={{ type: 'spring', stiffness: 50 }}
       >
-        <div className="subtitle">Let's Elevate Your Brand Together</div>
-        <p>Contact us today for a personalized consultation and discover how we can boost your brand.</p>
+        <Reveal>
+          <div className="subtitle">Let's Elevate Your Brand Together</div>
+        </Reveal>
+        <Reveal>
+          <p>Contact us today for a personalized consultation and discover how we can boost your brand.</p>
+        </Reveal>
         <div
           className="together-buttons"
         >
           <CTA />
-          {/* <button className="learn-more">Learn More</button>
-          <button className="get-started">Get Started</button> */}
         </div>
       </motion.div>
       <motion.div
@@ -37,7 +40,6 @@ const Together = () => {
         transition={{ type: 'spring', stiffness: 50 }}
       >
         <div className="img-container">
-
           <img src={togetherImage} alt="Together" />
         </div>
       </motion.div>

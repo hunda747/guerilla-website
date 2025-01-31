@@ -3,17 +3,21 @@ import './App.css'
 import Home from './pages/home'
 import AboutUs from './pages/aboutUs'
 import ContactUs from './pages/contactUs'
+import Cursor from './components/cursor';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-      </Routes>
-    </Router>
+    <>
+      <Cursor />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
+      </Router>
+    </>
   )
 }
 

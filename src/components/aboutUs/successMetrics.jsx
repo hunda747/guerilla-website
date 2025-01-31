@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/successMetrics.scss';
 import CTA from '../cta';
+import { Reveal } from '../reveal';
 
 const SuccessMetrics = () => {
   const metrics = [
@@ -24,7 +25,9 @@ const SuccessMetrics = () => {
   return (
     <section className="success-metrics">
       <div className="header-container">
-        <h2 className="section-title">Our Impact: 12+ Years of Proven Expertise</h2>
+        <Reveal>
+          <h2 className="section-title">Our Impact: 12+ Years of Proven Expertise</h2>
+        </Reveal>
         <div className="section-description">
           <p>At Guerilla, we believe every client’s dream is like a seed brimming with untapped potential. Just as a farmer nurtures seeds into thriving forests, we dedicate ourselves to cultivating your brand’s aspirations into tangible success.</p>
           <CTA />

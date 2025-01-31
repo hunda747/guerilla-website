@@ -21,21 +21,28 @@ import image14 from '../../assets/images/gorilla27.jpg';
 import image15 from '../../assets/images/gorilla15.png';
 import image16 from '../../assets/images/gorilla16.png';
 import CTA from "../cta";
+import { Reveal } from "../reveal";
 
 const ShuffleHero = () => {
   return (
     <section className="hero-section">
       <div className="hero-text">
         {/* <img src={logo} alt="Logo" className="logo-image" /> */}
-        <h3>
-          Guerilla
-        </h3>
-        <h3>
-          Marketing
-        </h3>
-        <p>
-          Transform Your Brand's Potential Through Immersive Marketing Experiences
-        </p>
+        <Reveal>
+          <h3>
+            Guerilla
+          </h3>
+        </Reveal>
+        <Reveal>
+          <h3>
+            Marketing
+          </h3>
+        </Reveal>
+        <Reveal>
+          <p>
+            Transform Your Brand's Potential Through Immersive Marketing Experiences
+          </p>
+        </Reveal>
         <div className="hero-text__buttons">
           <CTA />
           {/* <button className="cta-button">

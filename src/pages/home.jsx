@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <Navbar />
       <ShuffleHero />
-      <TrustedBrand />
+      {/* <TrustedBrand /> */}
       {/* <EventShowcase /> */}
       <WhatWeDo />
       <Example />

@@ -5,6 +5,7 @@ import multichoice from '../../assets/images/multichoice.png';
 import { Email, LinkedIn, Twitter } from '@mui/icons-material';
 import { motion, useInView } from 'framer-motion';
 import gmphoto from '../../assets/images/gmimage.jpg';
+import { Reveal } from '../reveal';
 
 const teamMembers = [
   {
@@ -58,8 +59,12 @@ const OurTeam = () => {
   return (
     <section className="our-team">
       <div className="headerCommon">
-        <div className="subtitle">Our Team</div>
-        <p className="description">Meet the talented individuals driving our success.</p>
+        <Reveal>
+          <div className="subtitle">Our Team</div>
+        </Reveal>
+        <Reveal>
+          <p className="description">Meet the talented individuals driving our success.</p>
+        </Reveal>
       </div>
       <div className="team-members">
         {teamMembers.map((member, index) => (

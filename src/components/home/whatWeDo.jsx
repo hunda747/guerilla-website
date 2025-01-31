@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import '../../styles/whatWeDo.scss';
 
 import { AddShoppingCart, EventRepeat, TravelExplore, WorkspacePremium } from '@mui/icons-material';
+import { Reveal } from '../reveal';
 const services = [
   {
     icon: <AddShoppingCart className="icon" />,
@@ -51,13 +52,21 @@ const WhatWeDo = () => {
       ref={ref}
     >
       <div className="headerCommon">
-        <h1>What We Do</h1>
-        <div className="subtitle">Creating Impactful Brand Experiences That Resonate</div>
-        <p className="description">
-          We create unforgettable brand experiences through strategic activations, innovative campaigns,
-          and impactful audience engagement. Our expertise ensures your brand stands out and connects
-          meaningfully with your audience.
-        </p>
+        <Reveal>
+
+          <h1>What We Do</h1>
+        </Reveal>
+        <Reveal>
+          <div className="subtitle">Creating Impactful Brand Experiences That Resonate</div>
+        </Reveal>
+        <Reveal>
+
+          <p className="description">
+            We create unforgettable brand experiences through strategic activations, innovative campaigns,
+            and impactful audience engagement. Our expertise ensures your brand stands out and connects
+            meaningfully with your audience.
+          </p>
+        </Reveal>
       </div>
       <div className="services">
         {services.map((service, index) => (
