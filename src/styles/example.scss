@@ -1,0 +1,165 @@
+@import "./global.scss";
+
+.example-container {
+  padding-top: 2rem;
+  position: relative;
+  // margin: 0 0 calc(100vh - 650px) 0;
+  // background-color: #2d2d2d; // bg-neutral-800
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.scroll-indicator {
+  display: flex;
+  height: 12rem; // h-48
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-text {
+  font-weight: 600; // font-semibold
+  text-transform: uppercase;
+  // color: #737373; // text-neutral-500
+}
+
+.carousel-section {
+  position: relative;
+  height: 300vh;
+  // background-color: #1a1a1a; // bg-neutral-900
+}
+
+.carousel-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh; // h-screen
+  align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.carousel-motion {
+  display: flex;
+  gap: 6rem; // gap-4
+
+  @media (max-width: 768px) {
+    gap: 2rem;
+  }
+}
+
+.card {
+  position: relative;
+  height: 550px;
+  width: 750px;
+  overflow: hidden;
+  background-color: #e5e5e5; // bg-neutral-200
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.card-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.card-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.card-title {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  padding: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
+
+.example-container {
+  position: relative;
+}
+
+.parent-container {
+  position: relative;
+  // Ensure this container has a defined height
+  height: 100vh; // or any specific height you need
+}
+
+.backgroundTitle {
+  padding: calc(100vh - 650px) 0;
+}
+
+.backgroundTextWrapper {
+  position: sticky;
+  top: 50%;
+  right: 0; // Adjust as needed
+  z-index: 1; // Ensure this is lower than .horizontalScrollCarousel
+  // text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .subtitle {
+    font-size: $headerFont;
+    font-weight: 550;
+    margin: 0;
+  }
+
+  .description {
+    font-size: $descriptionFont;
+    font-weight: 300;
+    font-family: $poppins;
+    margin: 0;
+  }
+
+  // Add any other necessary styles
+}
+
+.horizontalScrollCarousel {
+  position: relative;
+  z-index: 2; // Ensure this is higher than .backgroundTitle
+  // Add any other necessary styles
+}
+
+.carousel-section {
+  position: relative;
+  z-index: 2;
+}

@@ -1,0 +1,60 @@
+@import "./global.scss";
+
+.what-we-do {
+  padding: $sectionPaddingHigh 0;
+  // color: white;
+
+  .headerCommon {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+  }
+
+
+  .services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0;
+
+    @media (min-width: 768px) {
+      padding: 2rem 0;
+    }
+
+    @media (min-width: 1024px) {}
+
+    .service {
+      flex: 1 1 200px;
+      max-width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+
+      .icon {
+        font-size: $iconFontSize;
+        margin: 0;
+      }
+
+      h3 {
+        font-size: $smallHeaderFont;
+        line-height: $smallHeaderFont;
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        // color: white;
+      }
+
+      p {
+        font-family: $poppins;
+        font-size: $paragraphFont;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
+
+}

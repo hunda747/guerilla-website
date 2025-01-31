@@ -1,0 +1,41 @@
+@import "./global.scss";
+
+.trusted-brand {
+  // background-color: $dark; // Use a variable from global.scss
+  // color: $text-color; // Use a variable from global.scss
+  padding: 6rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $roboto;
+
+  max-width: 100%;
+  overflow: hidden;
+
+  &__text {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+
+    position: absolute;
+    left: 0;
+    .img-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      height: 80px;
+      width: auto;
+    }
+  }
+}

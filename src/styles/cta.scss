@@ -1,0 +1,32 @@
+@import './global.scss';
+
+.together-buttons {
+  font-family: $poppins;
+
+  button {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .get-started {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      color: $dark;
+    }
+  }
+}

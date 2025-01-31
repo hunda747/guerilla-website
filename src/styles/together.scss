@@ -1,0 +1,83 @@
+@import "./global.scss";
+
+.together {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: $sectionPaddingHigh 0;
+  max-width: 100%;
+  overflow: hidden;
+
+  .together-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 0px;
+    width: 100%;
+    max-width: 600px;
+
+    .subtitle {}
+
+    @media (min-width: 768px) {
+      padding: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-family: $poppins;
+    }
+
+    .together-buttons {
+      button {
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        background-color: #fff;
+        color: #000;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+
+      .get-started {
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .together-image {
+    display: none;
+
+    /* Add image styles here */
+    @media (min-width: 768px) {
+      display: block;
+    }
+
+    @media (min-width: 1024px) {
+      // display: none;
+    }
+
+    .img-container {
+      height: 400px;
+      max-width: 700px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
