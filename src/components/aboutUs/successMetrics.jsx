@@ -2,22 +2,23 @@ import React from 'react';
 import '../../styles/successMetrics.scss';
 import CTA from '../cta';
 import { Reveal } from '../reveal';
+import AnimatedNumber from '../counter';
 
 const SuccessMetrics = () => {
   const metrics = [
     {
       title: 'Campaigns & Activations',
-      value: '1K+',
+      value: 1000,
       description: 'Nationwide brand launches to regional roadshows for Safaricom, Coca-Cola, Roil, and more'
     },
     {
-      title: '59,000+ Consumers Engaged',
-      value: '59K+',
+      title: 'Consumers Engaged',
+      value: 59000,
       description: 'Coca-Cola\'s "Billion Reasons to Believe" campaign sampling and activations'
     },
     {
-      title: '12,960 Outlets Activated',
-      value: '12K+',
+      title: 'Outlets Activated',
+      value: 13000,
       description: 'Hyper-localized strategies for Roil Detergent and other brands'
     }
   ];
@@ -40,7 +41,12 @@ const SuccessMetrics = () => {
             {/* <div className="metric-icon">✓</div> */}
             <div className="metric-content">
               <h3 className="metric-value">
-                {metric.value}</h3>
+                <AnimatedNumber targetNumber={metric.value >= 1000000
+                  ? Math.round(metric.value / 1000000)
+                  : metric.value >= 1000
+                    ? Math.round(metric.value / 1000)
+                    : Math.round(metric.value)} />{metric.value >= 1000000 ? " M" : metric.value >= 1000 ? " K" : ""}+
+              </h3>
               <p className="metric-title">{metric.title}</p>
               {/* <p className="metric-description">{metric.description}</p> */}
             </div>
