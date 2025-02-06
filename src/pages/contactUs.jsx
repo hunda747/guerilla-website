@@ -1,12 +1,9 @@
 import React from 'react';
 import '../styles/contactUs.scss'; // Import the SCSS file
-import Footer from '../components/footer';
-import Navbar from '../components/navbar';
 
 const ContactUs = () => {
   return (
-    <>
-      <Navbar />
+    <div className="containerPaddingBig">
       <div className="contact-us">
         <div className="contact-form">
           {/* <h2>Get in Touch</h2> */}
@@ -37,8 +34,7 @@ const ContactUs = () => {
         </div>
 
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 

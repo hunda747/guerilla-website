@@ -25,35 +25,37 @@ import { Reveal } from "../reveal";
 
 const ShuffleHero = () => {
   return (
-    <section className="hero-section">
-      <div className="hero-text">
-        {/* <img src={logo} alt="Logo" className="logo-image" /> */}
-        <Reveal>
-          <h3>
-            Guerilla
-          </h3>
-        </Reveal>
-        <Reveal>
-          <h3>
-            Marketing
-          </h3>
-        </Reveal>
-        <Reveal>
-          <p>
-            Transform Your Brand's Potential Through Immersive Marketing Experiences
-          </p>
-        </Reveal>
-        <div className="hero-text__buttons">
-          <CTA />
-          {/* <button className="cta-button">
+    <div className="containerPaddingBig">
+      <section className="hero-section ">
+        <div className="hero-text">
+          {/* <img src={logo} alt="Logo" className="logo-image" /> */}
+          <Reveal>
+            <h3>
+              Guerilla
+            </h3>
+          </Reveal>
+          <Reveal>
+            <h3>
+              Marketing
+            </h3>
+          </Reveal>
+          <Reveal>
+            <p>
+              Transform Your Brand's Potential Through Immersive Marketing Experiences
+            </p>
+          </Reveal>
+          <div className="hero-text__buttons">
+            <CTA />
+            {/* <button className="cta-button">
             Find a class
           </button> */}
+          </div>
         </div>
-      </div>
-      <div className="shuffle-grid-container">
-        <ShuffleGrid />
-      </div>
-    </section>
+        <div className="shuffle-grid-container">
+          <ShuffleGrid />
+        </div>
+      </section>
+    </div>
   );
 };
 

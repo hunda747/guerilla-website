@@ -2,7 +2,7 @@
 
 .together {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   padding: $sectionPaddingHigh 0;
   max-width: 100%;
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: left;
     padding: 0px;
-    width: 100%;
+    width: 50%;
     max-width: 600px;
 
     .subtitle {}
@@ -34,6 +34,7 @@
 
   .together-image {
     display: none;
+    width: 50%;
 
     /* Add image styles here */
     @media (min-width: 768px) {

@@ -1,32 +1,45 @@
 import React, { useState } from 'react';
 import '../styles/navbar.scss';
+import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/images/gorillalogo.png';
-import { Link } from 'react-router-dom';
+import FullNavbar from './fullNavbar';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="Logo" className="logo-image" />
-        <span className="logo-text">GUERILLA</span>
-      </div>
-      <button className="hamburger" onClick={toggleMobileMenu}>
-        ☰
-      </button>
-      <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about-us">About Us</Link></li>
-        {/* <li><Link to="/services">Services</Link></li> */}
-        <li><Link to="/contact-us">Contact Us</Link></li>
-      </ul>
-    </nav>
+    <div className="containerPaddingBig">
+      <nav className="navbar ">
+        <div className="logo">
+          <img src={logo} alt="Logo" className="logo-image" />
+          <span className="logo-text">GUERILLA</span>
+        </div>
+        {/* <button className="hamburger" onClick={toggleMobileMenu}>
+          ☰
+        </button> */}
+        {/* <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
+          <li className={location.pathname === '/' ? 'active' : ''}>
+            <Link to="/">Home</Link>
+          </li>
+          <li className={location.pathname === '/about-us' ? 'active' : ''}>
+            <Link to="/about-us">About Us</Link>
+          </li>
+          <li className={location.pathname === '/works' ? 'active' : ''}>
+            <Link to="/works">Works</Link>
+          </li>
+          <li className={location.pathname === '/contact-us' ? 'active' : ''}>
+            <Link to="/contact-us">Contact Us</Link>
+          </li>
+        </ul> */}
+        <FullNavbar />
+      </nav>
+    </div>
   );
 };
 

@@ -72,7 +72,7 @@ const EventShowcase = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
-    <div className="event-showcase" ref={targetRef}>
+    <div className="event-showcase containerPaddingBig" ref={targetRef}>
       <div className="headerCommon">
         <div className="subtitle">Event Showcase</div>
         <p className="description">Explore our vibrant past events and successful campaigns.</p>

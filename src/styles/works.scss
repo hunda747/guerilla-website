@@ -1,0 +1,141 @@
+@import "./global.scss";
+
+.works-container {
+  // padding: 1.5rem;
+}
+
+.works-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.works-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 0.5rem;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+
+    li {
+      cursor: pointer;
+
+      &:not(:last-child)::after {
+        content: " / ";
+        margin: 0 0.5rem;
+        color: #4b5563;
+      }
+    }
+  }
+}
+
+.category-button {
+  padding: 0.5rem 0;
+
+  &.active {
+    color: #000;
+    font-weight: 600;
+  }
+
+  &:not(.active) {
+    color: #4b5563;
+  }
+}
+
+.search-input {
+  width: 16rem;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+.campaigns-grid {
+  display: grid;
+  gap: 8.5rem;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.campaign-wrapper {
+  &.even {
+    transform: translateY(-20px);
+  }
+
+  &.odd {
+    transform: translateY(20px);
+  }
+
+  @media (max-width: 639px) {
+
+    &.even,
+    &.odd {
+      transform: translateY(0);
+    }
+  }
+}
+
+.campaign-card {
+  // border: 1px solid #e5e7eb;
+  // border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.campaign-image {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  display: block;
+}
+
+.campaign-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.campaign-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.campaign-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.read-more-button {
+  margin-top: 0.5rem;
+  color: #3b82f6;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

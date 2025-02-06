@@ -25,15 +25,18 @@ const contacts = [
 
 const ContactList = () => {
   return (
-    <div className="contact-list">
-      {contacts.map((contact, index) => (
-        <div key={index} className="contact-item">
-          <div className="icon">{contact.icon}</div>
-          <h3>{contact.title}</h3>
-          <p>{contact.description}</p>
-          <a href="#">{contact.detail}</a>
-        </div>
-      ))}
+    <div className="containerPaddingBig">
+
+      <div className="contact-list">
+        {contacts.map((contact, index) => (
+          <div key={index} className="contact-item">
+            <div className="icon">{contact.icon}</div>
+            <h3>{contact.title}</h3>
+            <p>{contact.description}</p>
+            <a href="#">{contact.detail}</a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

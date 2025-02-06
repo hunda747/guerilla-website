@@ -57,7 +57,7 @@ const OurTeam = () => {
   const isInView = useInView(ref, { once: false });
 
   return (
-    <section className="our-team">
+    <section className="our-team containerPaddingBig">
       <div className="headerCommon">
         <Reveal>
           <div className="subtitle">Our Team</div>

@@ -47,45 +47,48 @@ const WhatWeDo = () => {
   // Define the services as an array of objects
 
   return (
-    <div
-      className="what-we-do"
-      ref={ref}
-    >
-      <div className="headerCommon">
-        <Reveal>
+    <div className="containerPaddingBig">
 
-          <h1>What We Do</h1>
-        </Reveal>
-        <Reveal>
-          <div className="subtitle">Creating Impactful Brand Experiences That Resonate</div>
-        </Reveal>
-        <Reveal>
+      <div
+        className="what-we-do"
+        ref={ref}
+      >
+        <div className="headerCommon">
+          <Reveal>
 
-          <p className="description">
-            We create unforgettable brand experiences through strategic activations, innovative campaigns,
-            and impactful audience engagement. Our expertise ensures your brand stands out and connects
-            meaningfully with your audience.
-          </p>
-        </Reveal>
-      </div>
-      <div className="services">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            className="service"
-            initial="hidden"
-            variants={containerVariants}
-            animate={isInView ? "visible" : "hidden"}
-            // ref={ref}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <div className="icon-container">{service.icon}</div>
-            <h3>{service.title1}</h3>
-            <h3>{service.title2}</h3>
-            <p>{service.description}</p>
-          </motion.div>
-        ))}
+            <h1>What We Do</h1>
+          </Reveal>
+          <Reveal>
+            <div className="subtitle">Creating Impactful Brand Experiences That Resonate</div>
+          </Reveal>
+          <Reveal>
+
+            <p className="description">
+              We create unforgettable brand experiences through strategic activations, innovative campaigns,
+              and impactful audience engagement. Our expertise ensures your brand stands out and connects
+              meaningfully with your audience.
+            </p>
+          </Reveal>
+        </div>
+        <div className="services">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              className="service"
+              initial="hidden"
+              variants={containerVariants}
+              animate={isInView ? "visible" : "hidden"}
+              // ref={ref}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <div className="icon-container">{service.icon}</div>
+              <h3>{service.title1}</h3>
+              <h3>{service.title2}</h3>
+              <p>{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );

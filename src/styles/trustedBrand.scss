@@ -26,6 +26,7 @@
 
     position: absolute;
     left: 0;
+
     .img-wrapper {
       position: relative;
       overflow: hidden;
@@ -33,9 +34,10 @@
       justify-content: center;
       align-items: center;
     }
+
     img {
-      height: 80px;
-      width: auto;
+      width: 150px;
+      height: auto;
     }
   }
 }

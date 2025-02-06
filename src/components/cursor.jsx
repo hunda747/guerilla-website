@@ -7,7 +7,7 @@ const Cursor = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setPosition({ x: e.pageX - 15, y: e.pageY - 15 });
+      setPosition({ x: e.pageX - 30, y: e.pageY - 30 });
     };
 
     const handleClick = () => {

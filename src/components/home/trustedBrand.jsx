@@ -7,16 +7,22 @@ import Cocacola from '../../assets/images/CocaCola.png';
 import multichoice from '../../assets/images/multichoice.png';
 import safaricom from '../../assets/images/safaricom.png';
 import useMeasure from 'react-use-measure';
+import capitals from '../../assets/images/54capitallogo1.jpg';
+import dachi from '../../assets/images/dachilogo1.png';
+import kerry from '../../assets/images/kerry_logo1.png';
+import niglogo from '../../assets/images/niglogo1.png';
+import wilmar from '../../assets/images/wilmarlogo1.png';
 
 const images = [
   BGI,
   Cocacola,
   multichoice,
   safaricom,
-  BGI,
-  Cocacola,
-  multichoice,
-  safaricom,
+  capitals,
+  dachi,
+  kerry,
+  // niglogo,
+  wilmar,
 ];
 
 const TrustedBrand = () => {

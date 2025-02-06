@@ -52,28 +52,30 @@ const SingleTestimony = ({ quote, name, title }) => {
   const isInView = useInView(ref, { once: false });
 
   return (
-    <div className="testimony" ref={ref}>
-      <div className="testimony__stars">
-        ★★★★★
-      </div>
-      <motion.blockquote
-        className="testimony__quote"
-        variants={container}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-      >
-        {quote.split("").map((char, index) => (
-          <motion.span key={index} variants={child}>
-            {char}
-          </motion.span>
-        ))}
-      </motion.blockquote>
-      <div className="testimony__author">
-        <div className="testimony__info">
-          <p className="testimony__name">{name}</p>
-          <p className="testimony__title">{title}</p>
+    <div className="containerPaddingBig">
+      <div className="testimony" ref={ref}>
+        <div className="testimony__stars">
+          ★★★★★
         </div>
-        <img src={safaricom} alt="Webflow" className="testimony__logo" />
+        <motion.blockquote
+          className="testimony__quote"
+          variants={container}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+        >
+          {quote.split("").map((char, index) => (
+            <motion.span key={index} variants={child}>
+              {char}
+            </motion.span>
+          ))}
+        </motion.blockquote>
+        <div className="testimony__author">
+          <div className="testimony__info">
+            <p className="testimony__name">{name}</p>
+            <p className="testimony__title">{title}</p>
+          </div>
+          {/* <img src={safaricom} alt="Webflow" className="testimony__logo" /> */}
+        </div>
       </div>
     </div>
   );

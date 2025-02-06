@@ -11,6 +11,7 @@ $background-color: #F8F9FA;
   align-items: center;
   justify-content: center;
   padding: $sectionPaddingHigh 0;
+  // background-color: #333;
 
   .header-container {
     width: 100%;
@@ -48,8 +49,10 @@ $background-color: #F8F9FA;
     // max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
+    cursor: pointer;
 
     .metric-card {
+      cursor: pointer;
       // background: white;
       // padding: 2rem;
       // border-radius: 12px;

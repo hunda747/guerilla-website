@@ -18,7 +18,8 @@ $raieway: "Raleway", sans-serif;
 $playfair: "Playfair Display", serif;
 
 //colors
-$dark: #ffdb4a;
+// $dark: #ffdb4a;
+$dark: #FFC514;
 
 // font color
 $brownish: #565656;
@@ -60,6 +61,10 @@ $sectionPaddingBig: clamp(60px, 10vw, 120px);
 $sectionPaddingHigh: clamp(40px, 6vw, 80px);
 $sectionPaddingMedium: clamp(15px, 4vw, 30px);
 $sectionPaddingLow: clamp(10px, 2vw, 20px);
+
+$widthPaddingHigh: clamp(3rem, 2vw, 10rem);
+$widthPaddingMid: clamp(1rem, 2vw, 3rem);
+$widthPaddingLow: clamp(1rem, 2vw, 2rem);
 
 //laptop wrapper padding
 $fullPadding: 5rem;
@@ -141,4 +146,14 @@ $mobilePadding: 1.5rem;
     // margin-right: auto;
   }
 
+}
+
+.containerPaddingLow {
+  padding: $sectionPaddingLow $widthPaddingHigh;
+}
+
+.containerPaddingBig {
+  max-width: 1180px;
+  margin: 0 auto;
+  // padding: 2rem;
 }

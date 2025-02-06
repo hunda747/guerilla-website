@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Safaricom PR Event",
+    "category": "PR Events",
+    "image": "../images/gorilla1.png",
+    "description": "A PR event in 5 major towns in Ethiopia with high gov't officials and media."
+  },
+  {
+    "id": 2,
+    "title": "Kerry Group Research",
+    "category": "Market Research",
+    "image": "../images/gorilla2.png",
+    "description": "Consumer tasting research on Sunchip blind taste with 26 participants."
+  },
+  {
+    "id": 3,
+    "title": "Coca-Cola Activation",
+    "category": "Activations",
+    "image": "../images/gorilla13.png",
+    "description": "BRTB campaign with free sampling for 59,000 teens."
+  },
+  {
+    "id": 4,
+    "title": "Habesha Brewery Influencers",
+    "category": "Brand Activation",
+    "image": "../images/gorilla6.png",
+    "description": "200 youth influencers at 75 outlets during Adewa celebration."
+  },
+  {
+    "id": 5,
+    "title": "Kenya Embassy PR Event",
+    "category": "PR Events",
+    "image": "../images/gorilla7.png",
+    "description": "PR event during the IGAD Summit at the African Union."
+  },
+  {
+    "id": 6,
+    "title": "Roll Detergent Campaign",
+    "category": "Activations",
+    "image": "../images/gorilla9.png",
+    "description": "Sold 10K five-kg packs and placed posters in 12,960 outlets."
+  },
+  {
+    "id": 7,
+    "title": "BGI Mystery Consumers",
+    "category": "Activations",
+    "image": "../images/gorilla11.png",
+    "description": "Mystery consumer activation in Addis Ababa at 40 outlets."
+  },
+  {
+    "id": 8,
+    "title": "Triggerise Product Launch",
+    "category": "Activations",
+    "image": "../images/gorilla12.png",
+    "description": "Open market activation for product launch."
+  },
+  {
+    "id": 9,
+    "title": "Double A Paper Activation",
+    "category": "Activations",
+    "image": "../images/gorilla13.png",
+    "description": "Door-to-door activation in 5 towns."
+  },
+  {
+    "id": 10,
+    "title": "Anchor Milk Activation",
+    "category": "Activations",
+    "image": "../images/gorilla14.png",
+    "description": "New Year Bazaar activation with free samples."
+  }
+]

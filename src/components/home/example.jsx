@@ -12,6 +12,7 @@ import safariEventOnCar from '../../assets/images/gorilla8.png';
 
 import maltaGroupEvent from '../../assets/images/gorilla26.jpg';
 import cocacolaEvent from '../../assets/images/gorilla3.png';
+import { useNavigate } from "react-router-dom";
 
 const cards = [
   {
@@ -80,7 +81,6 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
 
   return (
@@ -97,10 +97,12 @@ const HorizontalScrollCarousel = () => {
 };
 
 const Card = ({ card }) => {
+  const navigate = useNavigate();
   return (
     <div
       key={card.id}
       className="card"
+      onClick={() => navigate('/works')}
     >
       <div
         style={{
