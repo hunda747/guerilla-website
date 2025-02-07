@@ -5,6 +5,7 @@ import { usePageTransition } from "./hooks/usePageTransition";
 import Cursor from "./components/cursor";
 import ScrollToTop from "./hooks/scrollToTop";
 import StickyFooter from "./components/stickyFooter";
+import Contact from "./components/contact/contact";
 
 const Layout = () => {
   const { PageTransitionWrapper } = usePageTransition();
@@ -13,11 +14,12 @@ const Layout = () => {
     <>
       <ScrollToTop />
       <Cursor />
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <Outlet /> {/* Renders the matched page */}
       </main>
-      <StickyFooter />
+      {/* <StickyFooter /> */}
+      <Contact />
     </>
   );
 };

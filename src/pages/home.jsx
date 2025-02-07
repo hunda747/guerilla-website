@@ -10,15 +10,16 @@ import ShuffleHero from '../components/home/heroSection';
 import SuccessMetrics from '../components/aboutUs/successMetrics';
 import { motion } from 'framer-motion';
 import { usePageTransition } from '../hooks/usePageTransition';
+import HeroCenter from '../components/home/heroSectionCopy';
 
 const Home = () => {
   const { PageTransitionWrapper } = usePageTransition();
   return (
     <>
-      <ShuffleHero />
-      <TrustedBrand />
+      <HeroCenter />
       {/* <EventShowcase /> */}
       <SuccessMetrics />
+      <TrustedBrand />
       <Example />
       <WhatWeDo />
       {/* <OurTeam /> */}

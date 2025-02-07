@@ -52,14 +52,12 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  width: 100%;
-  position: absolute;
-  top: 25px;
-  right: 70px;
+  position: relative;
   width: 4rem;
   height: 2rem;
   cursor: pointer;
   z-index: 101;
+  margin-right: 10px;
 
   .bar {
     position: absolute;
@@ -67,7 +65,7 @@
     width: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #191919;
+    background: white;
     transition: 250ms ease-in-out;
 
     &#bar1 {
