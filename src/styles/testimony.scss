@@ -11,7 +11,7 @@
 
 .testimony {
   text-align: center;
-  padding: $sectionPaddingHigh 0;
+  // padding: $sectionPaddingHigh 0;
   border-radius: 8px;
   max-width: 800px;
   margin: 0 auto;
@@ -25,7 +25,12 @@
   &__quote {
     font-size: $smallHeaderFont;
     font-style: italic;
+    margin: 0;
     margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      // margin-bottom: 20px;
+    }
   }
 
   &__author {

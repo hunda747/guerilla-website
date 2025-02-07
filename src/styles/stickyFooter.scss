@@ -19,25 +19,44 @@
   &__content {
     color: $dark;
     background-color: $primary-text;
-    padding: 2rem 3rem;
+    padding: 2rem $widthPaddingHigh;
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include breakpoint(md) {
+      padding: 2rem 3rem;
+    }
   }
 
   &__rows {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: left;
     padding: 1rem 0;
     max-width: 100%;
 
+    @include breakpoint(md) {
+      flex-direction: row;
+      // justify-content: space-between;
+      // align-items: center;
+    }
+
     &-logo {
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+
       img {
         // width: 100%;
-        height: 150px;
+        height: 50px;
+
+        @include breakpoint(md) {
+          height: 150px;
+        }
       }
     }
   }
@@ -51,17 +70,28 @@
     max-width: 100%;
 
     h1 {
-      font-size: 4rem;
-      line-height: 4rem;
+      font-size: 2rem;
+      line-height: 2rem;
       // margin-top: 2.5rem;
       // margin-bottom: 1rem;
+
+      @include breakpoint(md) {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
     }
   }
 
   &__nav {
     display: flex;
+    flex-direction: column;
     flex-shrink: 0;
-    gap: 5rem;
+    gap: 0rem;
+
+    @include breakpoint(md) {
+      gap: 5rem;
+      flex-direction: row;
+    }
 
     &-section {
       display: flex;
@@ -69,14 +99,23 @@
       gap: 0.5rem;
 
       h3 {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0rem;
         text-transform: uppercase;
         // color: #ffffff80;
+
+
+        @include breakpoint(md) {
+          margin-bottom: 0.5rem;
+        }
       }
 
       p {
         cursor: pointer;
-        margin: 10px 0;
+        margin: 0;
+
+        @include breakpoint(md) {
+          margin: 10px 0;
+        }
       }
 
       p:hover {

@@ -10,26 +10,51 @@ $background-color: #F8F9FA;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: $sectionPaddingHigh 0;
+  padding: 0;
+  padding-top: $sectionPaddingHigh;
   // background-color: #333;
+
+  @include breakpoint(md) {
+    padding: $sectionPaddingHigh 0;
+  }
 
   .header-container {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      gap: 2rem;
+    }
 
     .section-title {
-      font-size: $headerFont-sm;
-      line-height: $headerFont-sm;
       // max-width: 500px;
       color: $primary-text;
       margin-bottom: 0rem;
       font-weight: 600;
+      font-size: $headerFont;
+      line-height: $headerFont;
+      margin: 0;
+
+      @include breakpoint(md) {
+        font-size: $headerFont-sm;
+        line-height: $headerFont-sm;
+
+        // font-size: 2rem;
+        // margin-bottom: 3rem;
+      }
     }
 
     .section-description {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: flex-start;
+      gap: 1rem;
       width: 100%;
 
       p {
@@ -37,6 +62,7 @@ $background-color: #F8F9FA;
         line-height: 27px;
         color: $light-text;
         font-family: $poppins;
+        margin: 0;
       }
     }
   }
@@ -48,8 +74,14 @@ $background-color: #F8F9FA;
     gap: 2rem;
     // max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding-top: 2rem;
     cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
 
     .metric-card {
       cursor: pointer;
@@ -66,69 +98,30 @@ $background-color: #F8F9FA;
         transform: translateY(-5px);
       }
 
+      margin-bottom: 1.5rem;
+
+      @include breakpoint(md) {}
+
       .metric-value {
         font-size: $headerFont;
-        color: $primary-color;
+        color: $primary-text;
         margin: 0;
         font-weight: 700;
       }
 
       .metric-title {
         font-size: 1.2rem;
-        color: $primary-color;
+        color: $light-text;
         margin: 0;
         font-weight: 600;
       }
 
       .metric-description {
-        // color: $light-text;
+        color: $light-text;
         line-height: 1.6;
         font-size: $descriptionFont;
       }
     }
   }
 
-  @media (max-width: 768px) {
-    .header-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 2rem;
-
-      h2 {
-        margin: 0
-      }
-    }
-
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .metrics-grid {
-      flex-direction: column;
-      align-items: center;
-
-      .metric-card {
-        margin-bottom: 1.5rem;
-        width: 100%;
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    padding: $sectionPaddingLow 0;
-
-    .section-title {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    .metrics-grid {
-      .metric-card {
-        padding-left: 0.5rem;
-      }
-    }
-  }
 }

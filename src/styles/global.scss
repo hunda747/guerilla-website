@@ -32,7 +32,7 @@ $third: #ee7b28;
 $primary-text: black;
 $secondary-text: white;
 $tertiary-text: #ffc514;
-$light-text: #545454;
+$light-text: #3d3d3d;
 
 //spacing
 $spacing-md: 12px;
@@ -43,10 +43,11 @@ $heroFont: clamp(3rem, 5vw, 6rem);
 $headerFont: clamp(2.5rem, 5vw, 3rem);
 $headerFont-sm: clamp(26px, 4vw, 36px);
 $subHeaderFont: clamp(1rem, 2vw, 1.3rem);
-$descriptionFont: clamp(0.8rem, 1.5vw, 1rem);
+$descriptionFont: clamp(18px, 1.5vw, 22px);
 $bigDescriptionFont: clamp(1rem, 1.5vw, 1.2rem);
 
 $smallHeaderFont: clamp(1.2rem, 2vw, 1.6rem);
+// $paragraphFont: 18px;
 $paragraphFont: clamp(0.8rem, 1.5vw, 1rem);
 $iconFontSize: clamp(4rem, 2vw, 7rem);
 
@@ -60,9 +61,9 @@ $headerHeight: 50px;
 $sectionPaddingBig: clamp(60px, 10vw, 120px);
 $sectionPaddingHigh: clamp(40px, 6vw, 80px);
 $sectionPaddingMedium: clamp(15px, 4vw, 30px);
-$sectionPaddingLow: clamp(10px, 2vw, 20px);
+$sectionPaddingLow: clamp(16px, 2vw, 32px);
 
-$widthPaddingHigh: clamp(3rem, 2vw, 10rem);
+$widthPaddingHigh: clamp(1.5rem, 2vw, 10rem);
 $widthPaddingMid: clamp(1rem, 2vw, 3rem);
 $widthPaddingLow: clamp(1rem, 2vw, 2rem);
 
@@ -155,5 +156,10 @@ $mobilePadding: 1.5rem;
 .containerPaddingBig {
   max-width: 1180px;
   margin: 0 auto;
-  // padding: 2rem;
+  padding: $sectionPaddingMedium $widthPaddingHigh;
+
+  @include breakpoint(md) {
+    padding: none;
+    // padding: inherit $widthPaddingHigh;
+  }
 }
