@@ -90,10 +90,16 @@ const HorizontalScrollCarousel = () => {
   });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
 
+  // Check if we're on mobile
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <section ref={targetRef} className="carousel-section">
       <div className="carousel-container">
-        <motion.div style={{ x }} className="carousel-motion">
+        <motion.div
+          style={isMobile ? {} : { x }}
+          className="carousel-motion"
+        >
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
