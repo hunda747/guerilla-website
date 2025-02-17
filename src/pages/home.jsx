@@ -11,6 +11,10 @@ import SuccessMetrics from '../components/aboutUs/successMetrics';
 import { motion } from 'framer-motion';
 import { usePageTransition } from '../hooks/usePageTransition';
 import HeroCenter from '../components/home/heroSectionCopy';
+import BrandTransform from '../components/aboutUs/brandTransform';
+import Projects from '../components/projects/projects';
+import PopImage from '../components/popimage/popimage';
+import MarketingCTA from '../components/MarketingCTA';
 
 const Home = () => {
   const { PageTransitionWrapper } = usePageTransition();
@@ -18,13 +22,17 @@ const Home = () => {
     <>
       <HeroCenter />
       {/* <EventShowcase /> */}
-      <SuccessMetrics />
       <TrustedBrand />
+      <SuccessMetrics />
+      {/* <PopImage /> */}
       <Example />
       <WhatWeDo />
+      {/* <Projects /> */}
       {/* <OurTeam /> */}
       <Testimony />
-      <Together />
+      {/* <BrandTransform /> */}
+      {/* <Together /> */}
+      <MarketingCTA />
     </>
   );
 };

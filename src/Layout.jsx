@@ -18,8 +18,8 @@ const Layout = () => {
       <main>
         <Outlet /> {/* Renders the matched page */}
       </main>
-      {/* <StickyFooter /> */}
-      <Contact />
+      <StickyFooter />
+      {/* <Contact /> */}
     </>
   );
 };

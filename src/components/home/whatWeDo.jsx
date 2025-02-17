@@ -4,6 +4,7 @@ import '../../styles/whatWeDo.scss';
 
 import { AddShoppingCart, EventRepeat, TravelExplore, WorkspacePremium } from '@mui/icons-material';
 import { Reveal } from '../reveal';
+
 const services = [
   {
     icon: <AddShoppingCart className="icon" />,
@@ -30,6 +31,46 @@ const services = [
     description: "& Managing Brand launches",
   }
 ];
+
+const reports = [
+  {
+    icon: <AddShoppingCart className="icon" />,
+    title1: "Automated",
+    title2: "Tracking",
+    description: "Real-time monitoring for accuracy",
+  },
+  {
+    icon: <WorkspacePremium className="icon" />,
+    title1: "Custom",
+    title2: "Templates",
+    description: "Ready-to-use formats for quick reports",
+  },
+  {
+    icon: <TravelExplore className="icon" />,
+    title1: "Stock Control &",
+    title2: "Management",
+    description: "Keep inventory in check",
+  },
+  {
+    icon: <EventRepeat className="icon" />,
+    title1: "Data",
+    title2: "Security",
+    description: "Secure cloud storage for all reports",
+  }
+];
+
+const servicesHeader = {
+  miniTitle: "What We Do",
+  title: "Creating Impactful Brand Experiences That Resonate",
+  description: "We create unforgettable brand experiences through strategic activations, innovative campaigns,and impactful audience engagement. Our expertise ensures your brand stands out and connects meaningfully with your audience."
+}
+
+const reportsHeader = {
+  miniTitle: "Reports",
+  title: "Smart Reporting & Analytics",
+  description: "Effortlessly track, manage, and analyze your data with our digital reporting tools.."
+}
+
 const WhatWeDo = () => {
   // Define the animation variants
   const containerVariants = {
@@ -55,18 +96,14 @@ const WhatWeDo = () => {
       >
         <div className="headerCommon">
           <Reveal>
-
-            <h1>What We Do</h1>
+            <h1>{servicesHeader.miniTitle}</h1>
           </Reveal>
           <Reveal>
-            <div className="subtitle">Creating Impactful Brand Experiences That Resonate</div>
+            <div className="subtitle">{servicesHeader.title}</div>
           </Reveal>
           <Reveal>
-
             <p className="description">
-              We create unforgettable brand experiences through strategic activations, innovative campaigns,
-              and impactful audience engagement. Our expertise ensures your brand stands out and connects
-              meaningfully with your audience.
+              {servicesHeader.description}
             </p>
           </Reveal>
         </div>

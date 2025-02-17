@@ -4,6 +4,7 @@
   // background-color: $dark; // Use a variable from global.scss
   // color: $text-color; // Use a variable from global.scss
   padding: 6rem 0;
+  // padding-bottom: 0;
   text-align: center;
   display: flex;
   align-items: center;
@@ -14,14 +15,16 @@
   overflow: hidden;
 
   &__text {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    // margin-bottom: 20px;
+    font-size: 1.6rem;
+    margin: 0;
+    font-family: $inter;
   }
 
   &__logos {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
     overflow: hidden;
 
     position: absolute;

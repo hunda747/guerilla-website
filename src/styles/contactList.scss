@@ -2,11 +2,15 @@
 
 .contact-list {
   display: flex;
+
   justify-content: flex-start;
   gap: 2rem;
   border-top: 1px dashed #ccc;
+  padding: $sectionPaddingLow 0;
 
-  padding: $sectionPaddingBig 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
   .contact-item {
     text-align: left;
@@ -33,8 +37,9 @@
     }
 
     a {
-      color: $primary-text;
+      color: $light-text;
       text-decoration: none;
+      font-family: $poppins;
 
       &:hover {
         text-decoration: underline;

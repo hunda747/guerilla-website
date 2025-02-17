@@ -14,18 +14,25 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
+
 }
 
 .category-buttons {
   display: flex;
   gap: 0.5rem;
 
+
   ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+
+    @media (max-width: 640px) {
+      flex-wrap: wrap;
+      // flex-direction: column;
+    }
 
     li {
       cursor: pointer;

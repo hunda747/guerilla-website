@@ -66,17 +66,19 @@ const OurTeam = () => {
           <p className="description">Meet the talented individuals driving our success.</p>
         </Reveal>
       </div>
-      <div className="team-members">
+      <motion.div
+        initial="hidden"
+        variants={containerVariants}
+        animate={isInView ? "visible" : "hidden"}
+        ref={ref}
+        className="team-members">
         {teamMembers.map((member, index) => (
           <motion.div
             className="team-member"
             key={index}
-            initial="hidden"
-            variants={containerVariants}
-            animate={isInView ? "visible" : "hidden"}
-            ref={ref}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
+
           >
             <img src={member.image} alt={member.name} className="member-image" />
             <div className="member-info">
@@ -91,7 +93,7 @@ const OurTeam = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

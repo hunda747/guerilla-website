@@ -12,17 +12,21 @@ import dachi from '../../assets/images/dachilogo1.png';
 import kerry from '../../assets/images/kerry_logo1.png';
 import niglogo from '../../assets/images/niglogo1.png';
 import wilmar from '../../assets/images/wilmarlogo1.png';
+import awashwine from '../../assets/images/AWASHWINELO.png';
+import unitedbeverages from '../../assets/images/unitedbeverages.png';
 
 const images = [
   BGI,
   Cocacola,
   multichoice,
   safaricom,
-  capitals,
+  // capitals,
   dachi,
   kerry,
   // niglogo,
   wilmar,
+  awashwine,
+  unitedbeverages,
 ];
 
 const TrustedBrand = () => {
@@ -46,18 +50,21 @@ const TrustedBrand = () => {
   }, [xTranslation, width]);
 
   return (
-    <div className="trusted-brand">
-      {/* <p className="trusted-brand__text">Trusted by industry leaders worldwide</p> */}
-      <motion.div className="trusted-brand__logos" ref={ref} style={{ x: xTranslation }}>
-        {
-          [...images, ...images].map((image, index) => (
-            <div className="img-wrapper">
-              <img src={image} alt="Webflow" className="trusted-brand__image" key={index} />
-            </div>
-          ))
-        }
-      </motion.div>
-    </div >
+    <div className="containerPaddingBig">
+
+      {/* <p className="trusted-brand__text">Trusted by industry leaders</p> */}
+      <div className="trusted-brand">
+        <motion.div className="trusted-brand__logos" ref={ref} style={{ x: xTranslation }}>
+          {
+            [...images, ...images].map((image, index) => (
+              <div className="img-wrapper">
+                <img src={image} alt="Webflow" className="trusted-brand__image" key={index} />
+              </div>
+            ))
+          }
+        </motion.div>
+      </div >
+    </div>
   );
 };
 

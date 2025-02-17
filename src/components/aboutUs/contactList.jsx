@@ -7,13 +7,13 @@ const contacts = [
     icon: <Mail className="icon" />, // Replace with an actual icon component if needed
     title: 'Contact',
     description: 'Reach out to us for exciting collaboration opportunities and innovative marketing solutions.',
-    detail: 'info@guerillamarketing.com',
+    detail: 'info@guerillaethiopia.com',
   },
   {
     icon: <Phone className="icon" />, // Replace with an actual icon component if needed
     title: 'Phone',
     description: "Call us to discuss your brand's next big marketing adventure.",
-    detail: '+1 (555) 123-4567',
+    detail: '+251 911 674 965',
   },
   {
     icon: <LocationOn className="icon" />, // Replace with an actual icon component if needed

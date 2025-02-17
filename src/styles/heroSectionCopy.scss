@@ -2,7 +2,7 @@
 
 .hero-section {
   width: 100%;
-  height: calc(100vh - 10px);
+  height: calc(100vh);
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -31,6 +31,10 @@
     margin: 0 auto;
     max-width: 1150px;
 
+    @media (max-width: 768px) {
+      padding: 0 1.5rem;
+    }
+
     .logo-container {
       display: flex;
       justify-content: left;
@@ -40,6 +44,10 @@
       img {
         width: auto;
         height: 30px;
+
+        @media (max-width: 768px) {
+          height: 20px;
+        }
       }
     }
 
@@ -52,35 +60,34 @@
     }
   }
 
+  .hero-text__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 0 1.5rem;
+    }
+  }
+
   .hero-text {
     padding: 3rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     // height: 100%;
-    gap: 7rem;
+    gap: 2rem;
     position: relative;
     z-index: 1;
     padding-top: 2rem 0;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1150px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('../assets/images/gorilaRBG.png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.3;
-      z-index: -1;
-    }
 
     .logo-image {
       width: 100px;
@@ -88,93 +95,119 @@
       margin-bottom: 1rem;
     }
 
-    .hero-text__title {
+    .hero-text-description {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      color: $dark;
-      gap: 1.5rem;
-      width: 100%;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      width: fit-content;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
+      gap: 2rem;
 
-      h3 {
-        font-size: 8rem;
-        line-height: 6rem;
-        font-weight: 600;
-        margin: 0;
-        font-family: $inter;
-        text-transform: capitalize;
+      .hero-text__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        color: $dark;
+        gap: 1.5rem;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+
+        @media (max-width: 768px) {
+          left: 0;
+          transform: translateX(0);
+          gap: 1rem;
+        }
+
+        h3 {
+          font-size: 8rem;
+          line-height: 5rem;
+          font-weight: 600;
+          margin: 0;
+          font-family: $inter;
+          text-transform: capitalize;
+
+          @media (max-width: 768px) {
+            font-size: 4rem;
+            line-height: 3rem;
+          }
+        }
+      }
+
+      .hero-text__description {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+
+        p {
+          // position: sticky;
+          // bottom: 0px;
+          // right: 0px;
+          font-size: $bigDescriptionFont;
+          line-height: $bigDescriptionFont;
+          // max-width: 400px;
+          margin: 0;
+          font-family: $poppins;
+          font-weight: 300;
+          color: $light-text;
+          text-align: left;
+          color: white;
+
+          @media (max-width: 768px) {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            // text-align: center;
+          }
+        }
+
       }
     }
 
-    .hero-text__description {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
 
-      p {
-        // position: sticky;
-        // bottom: 0px;
-        // right: 0px;
-        font-size: $bigDescriptionFont;
-        line-height: $bigDescriptionFont;
-        max-width: 400px;
-        margin: 0;
-        font-family: $poppins;
-        font-weight: 300;
-        color: $light-text;
-        text-align: right;
-        color: white;
+    button {
+      background-color: $primary;
+      color: black;
+      width: 140px;
+      height: 140px;
+      padding: 0.5rem;
+      border-radius: 50%;
+      font-family: $poppins;
+      font-weight: 600;
+      border: 2px solid black;
+      display: flex;
+      font-size: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.1rem;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s ease;
+      z-index: 1;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background-color: white;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.9s ease;
+        z-index: -1;
       }
 
-      button {
-        background-color: $primary;
+      &:hover {
         color: black;
-        width: 140px;
-        height: 140px;
-        padding: 0.5rem;
-        border-radius: 50%;
-        font-family: $poppins;
-        font-weight: 600;
-        border: 2px solid black;
-        display: flex;
-        font-size: 1rem;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.1rem;
-        position: relative;
-        overflow: hidden;
-        transition: color 0.3s ease;
-        z-index: 1;
-        cursor: pointer;
 
         &::before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 0;
-          height: 0;
-          background-color: white;
-          border-radius: 50%;
-          transform: translate(-50%, -50%);
-          transition: all 0.9s ease;
-          z-index: -1;
-        }
-
-        &:hover {
-          color: black;
-
-          &::before {
-            width: 300%;
-            height: 300%;
-          }
+          width: 300%;
+          height: 300%;
         }
       }
     }
@@ -204,6 +237,21 @@
           transform: scale(0.95);
         }
       }
+    }
+  }
+
+  .hero-image {
+    width: auto;
+    height: 600px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fit;
     }
   }
 

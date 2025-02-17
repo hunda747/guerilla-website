@@ -9,6 +9,7 @@ import event3 from '../../assets/images/showcasesafari1.png';
 
 import safariEvent from '../../assets/images/gorilla11.png';
 import safariEventOnCar from '../../assets/images/gorilla8.png';
+import eastAfricaTigersEvent from '../../assets/images/gorilla5.png';
 
 import maltaGroupEvent from '../../assets/images/gorilla26.jpg';
 import cocacolaEvent from '../../assets/images/gorilla3.png';
@@ -17,12 +18,14 @@ import { useNavigate } from "react-router-dom";
 const cards = [
   {
     url: safariEvent,
-    title: "We did a PR event for our client safaricom at 5 major towns in Ethiopia in the presence of high gov't officials and medias",
+    title: "Safaricom PR Event",
+    description: "We did a PR event for our client safaricom at 5 major towns in Ethiopia in the presence of high gov't officials and medias",
     id: 1,
   },
   {
     url: safariEventOnCar,
-    title: "We have recruited and deployed 150 BA for door to door Sim card sells for Safaricom Ethio- pia to uplift 14k sells volume or Gross Add",
+    title: "Safaricom Door-to-Door Campaign",
+    description: "We have recruited and deployed 150 BA for door to door Sim card sells for Safaricom Ethiopia to uplift 14k sells volume or Gross Add",
     id: 2,
   },
   // {
@@ -32,22 +35,26 @@ const cards = [
   // },
   {
     url: maltaGroupEvent,
-    title: "We conducted Negus Malt activation in Addis Ababa during x-mass holiday and March Womens Month campagin",
+    title: "Negus Malt Activation",
+    description: "We conducted Negus Malt activation in Addis Ababa during x-mass holiday and March Womens Month campagin",
     id: 4,
   },
   {
     url: event2,
-    title: "We did volume uplifiting camapgin for Roll deteregent and sold out 10k five kg pack of roll and poster placement and map (Penetration) to 12,960 outlets",
+    title: "Roll Detergent Campaign",
+    description: "We did volume uplifiting camapgin for Roll deteregent and sold out 10k five kg pack of roll and poster placement and map (Penetration) to 12,960 outlets",
     id: 5,
   },
   {
     url: cocacolaEvent,
-    title: "We did Billion Reason To Believe /BRTB campaign funded by the CocaCola company and we conduct the actual campaign at  the ground level with Cactus Plc",
+    title: "Billion Reason To Believe /BRTB Campaign",
+    description: "We did Billion Reason To Believe /BRTB campaign funded by the CocaCola company and we conduct the actual campaign at  the ground level with Cactus Plc",
     id: 6,
   },
   {
-    url: event3,
-    title: "We conduct a beauty salon and instore activation at Mekele, Adigrat, Shire, Debre Markos, Bahir dar, Addis Ababa, shashemene, Gondor for the product of Miracle, Crown and Samira hair oil",
+    url: eastAfricaTigersEvent,
+    title: " East Africa Tigers Brand",
+    description: "We conduct a Consumer Tent Activation for East Africa Tigers Brand Industries product, Miracle Hair food and Crown Detergent Powder at Eight regions of Ethiopia",
     id: 7,
   },
 ];
@@ -113,9 +120,8 @@ const Card = ({ card }) => {
         className="card-image"
       ></div>
       <div className="card-content">
-        <p className="card-title">
-          {card.title}
-        </p>
+        <h3 className="card-title">{card.title}</h3>
+        <p className="card-description">{card.description}</p>
       </div>
     </div>
   );

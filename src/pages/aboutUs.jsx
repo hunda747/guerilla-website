@@ -7,7 +7,8 @@ import BrandTransform from '../components/aboutUs/brandTransform';
 import OurTeam from '../components/home/ourTeam';
 import { BrandingWatermark } from '@mui/icons-material';
 import { usePageTransition } from '../hooks/usePageTransition';
-
+import Navbar from '../components/Navbar';
+import Together from '../components/home/together';
 // Define the AboutUsText component
 const AboutUsText = () => {
   return (
@@ -17,8 +18,7 @@ const AboutUsText = () => {
         <p>Gorilla Marketing Plc is a young, fullservice marketing company
           registered in Ethiopia. We deliver tangible results for a broad diversity
           of clients nationwide and international. We're experts at introducing
-          modern, unique and innovative marketing techniques to the Ethiopi-
-          an business landscape, encouraging clients to spend their marketing
+          modern, unique and innovative marketing techniques to the Ethiopian business landscape, encouraging clients to spend their marketing.
         </p>
         <p>
           With over twelve years of experience, our team boasts unparalleled
@@ -28,16 +28,13 @@ const AboutUsText = () => {
           at every step.
         </p>
         <p>
-          Reach
-          Guerilla operates nationwide; we proudly own satellite project offices
-          in key  regions: North (Dessie), South(Aribaminch), and East (Direda-
-          wa). This extensive  network provides comprehensive ground visibili- ty,
-          enabling successful project execution and activations.
+          Reach Guerilla operates nationwide, we proudly own satellite project offices
+          in key regions. North(Dessie), South(Aribaminch), and East(Dire-dawa). This extensive  network provides comprehensive ground visibility, enabling successful project execution and activations.
         </p>
         <p>
           Looking at clients' needs and wants, we present services that range
-          from the  creative conception of events to on-the-ground execution
-          and documentation.  With On-the-ground Executions of Brand and
+          from the creative conception of events to on-the-ground execution
+          and documentation. With On-the-ground Executions of Brand and
           Marketing Communications, we strive to drive on-brand Conceptions,
           Innovation and Reach.
         </p>
@@ -70,12 +67,14 @@ const AboutUs = () => {
 
   return (
     <>
+      <Navbar />
       <div className="about-us-container">
         <div className="about-us-content">
           <AboutUsText />
           {/* <SuccessMetrics /> */}
           <OurTeam />
-          <BrandTransform />
+          <Together />
+          {/* <BrandTransform /> */}
           <ContactList />
         </div>
       </div>
