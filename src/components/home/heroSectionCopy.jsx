@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import '../../styles/heroSectionCopy.scss'; // Import the SCSS file
 
-import logo from '../../assets/images/orangeLogoBG.png';
-import logot from '../../assets/images/logotextguerillaBGT.png';
+import logo from '../../assets/images/orangeLogoBG.webp';
+import logot from '../../assets/images/logotextguerillaBGT.webp';
 // import heroImage from '../../assets/images/gorilaRBG.png';
-import heroImage from '../../assets/images/upscalemedia.png';
+import heroImage from '../../assets/images/upscalemedia.webp';
 
 import CTA from "../cta";
 import { Reveal } from "../reveal";

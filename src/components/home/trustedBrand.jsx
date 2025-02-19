@@ -50,15 +50,15 @@ const TrustedBrand = () => {
   }, [xTranslation, width]);
 
   return (
-    <div className="containerPaddingBig">
+    <div className=" trusted-brand-container">
 
       {/* <p className="trusted-brand__text">Trusted by industry leaders</p> */}
       <div className="trusted-brand">
         <motion.div className="trusted-brand__logos" ref={ref} style={{ x: xTranslation }}>
           {
             [...images, ...images].map((image, index) => (
-              <div className="img-wrapper">
-                <img src={image} alt="Webflow" className="trusted-brand__image" key={index} />
+              <div className="img-wrapper" key={index}>
+                <img src={image} alt="Webflow" className="trusted-brand__image" />
               </div>
             ))
           }

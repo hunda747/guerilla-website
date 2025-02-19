@@ -1,19 +1,18 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-
+import { useNavigate } from "react-router-dom";
 import '../../styles/example.scss';
 
 import event1 from '../../assets/images/showcasenegus1.png';
 import event2 from '../../assets/images/showcaserol1.png';
 import event3 from '../../assets/images/showcasesafari1.png';
 
-import safariEvent from '../../assets/images/gorilla11.png';
-import safariEventOnCar from '../../assets/images/gorilla8.png';
-import eastAfricaTigersEvent from '../../assets/images/gorilla5.png';
+import safariEvent from '../../assets/images/gorilla11.webp';
+import safariEventOnCar from '../../assets/images/gorilla8.webp';
+import eastAfricaTigersEvent from '../../assets/images/gorilla5.webp';
 
 import maltaGroupEvent from '../../assets/images/gorilla26.jpg';
-import cocacolaEvent from '../../assets/images/gorilla3.png';
-import { useNavigate } from "react-router-dom";
+import cocacolaEvent from '../../assets/images/gorilla3.webp';
 
 const cards = [
   {
