@@ -46,7 +46,9 @@ const HeroCenter = () => {
           </div>
           <Magnetic>
 
-            <button>
+            <button onClick={() => {
+              window.location.href = '/about-us';
+            }}>
               Learn More
               <ArrowDownward />
             </button>

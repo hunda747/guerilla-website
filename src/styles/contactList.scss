@@ -8,6 +8,8 @@
   border-top: 1px dashed #ccc;
   padding: $sectionPaddingLow 0;
 
+  padding-bottom: 3rem;
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -33,13 +35,14 @@
       font-size: 16px;
       margin: 0;
       font-family: $poppins;
-      color: $light-text;
+      color: $primary-text;
     }
 
     a {
       color: $light-text;
       text-decoration: none;
       font-family: $poppins;
+      font-style: italic;
 
       &:hover {
         text-decoration: underline;

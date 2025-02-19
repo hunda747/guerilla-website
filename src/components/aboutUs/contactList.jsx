@@ -7,19 +7,19 @@ const contacts = [
     icon: <Mail className="icon" />, // Replace with an actual icon component if needed
     title: 'Contact',
     description: 'Reach out to us for exciting collaboration opportunities and innovative marketing solutions.',
-    detail: 'info@guerillaethiopia.com',
+    detail: ['info@guerillaethiopia.com', 'medhane@guerillaethiopia.com'],
   },
   {
     icon: <Phone className="icon" />, // Replace with an actual icon component if needed
     title: 'Phone',
     description: "Call us to discuss your brand's next big marketing adventure.",
-    detail: '+251 911 674 965',
+    detail: ['+251 911 674 965', '+251 704 674 965'],
   },
   {
     icon: <LocationOn className="icon" />, // Replace with an actual icon component if needed
     title: 'Office',
     description: 'Visit us to brainstorm creative strategies and explore collaboration possibilities.',
-    detail: '456 Marketing Ave, Addis Ababa, Ethiopia',
+    detail: ['Addis Ababa, Ethiopia, From 22 to Megenagna around Lem hotel'],
   },
 ];
 
@@ -33,7 +33,9 @@ const ContactList = () => {
             <div className="icon">{contact.icon}</div>
             <h3>{contact.title}</h3>
             <p>{contact.description}</p>
-            <a href="#">{contact.detail}</a>
+            {contact.detail.map((detail, index) => (
+              <p key={index}><a href="#" >{detail}</a></p>
+            ))}
           </div>
         ))}
       </div>

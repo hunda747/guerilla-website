@@ -23,6 +23,7 @@ const ContactUs = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // Send data to EmailJS here
     emailjs.sendForm(
       'service_7ex10wc', // service key
@@ -107,9 +108,9 @@ const ContactUs = () => {
             </div>
 
             <h2>Visit us</h2>
-            <p>Chat to us in person at our Melbourne HQ.</p>
+            <p>Chat to us in person at our Addis Ababa HQ.</p>
             <div className="contact-link">
-              <LocationOn /> <a href="#" className="contact-link">100 Smith Street, Collingwood VIC 3066</a>
+              <LocationOn /> <a href="#" className="contact-link">Addis Ababa, Ethiopia, From 22 to Megenagna around Lem hotel</a>
             </div>
           </div>
         </div>

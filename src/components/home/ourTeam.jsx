@@ -5,6 +5,8 @@ import multichoice from '../../assets/images/multichoice.png';
 import { Email, LinkedIn, Twitter } from '@mui/icons-material';
 import { motion, useInView } from 'framer-motion';
 import gmphoto from '../../assets/images/gmimage.jpg';
+import personplaceHolder from '../../assets/images/personplaceHolder.webp';
+import femaleplaceholder from '../../assets/images/femaleplaceholder.webp';
 import { Reveal } from '../reveal';
 
 const teamMembers = [
@@ -18,10 +20,10 @@ const teamMembers = [
     dribbble: '#',
   },
   {
-    name: 'Mark Smith',
+    name: 'Nahum Yele',
     role: 'Project Manager',
     description: 'Mark ensures seamless execution of projects, keeping teams aligned and clients satisfied.',
-    image: multichoice,
+    image: personplaceHolder,
     linkedin: '#',
     x: '#',
     dribbble: '#',
@@ -30,20 +32,20 @@ const teamMembers = [
     name: 'Sophia Lee',
     role: 'Marketing Strategist',
     description: 'Sophia crafts compelling marketing strategies that resonate with audiences and drive engagement.',
-    image: multichoice,
+    image: femaleplaceholder,
     linkedin: '#',
     x: '#',
     dribbble: '#',
   },
-  {
-    name: 'James Brown',
-    role: 'Data Analyst',
-    description: 'James analyzes market trends to inform our strategies and optimize campaign performance.',
-    image: multichoice,
-    linkedin: '#',
-    x: '#',
-    dribbble: '#',
-  },
+  // {
+  //   name: 'James Brown',
+  //   role: 'Data Analyst',
+  //   description: 'James analyzes market trends to inform our strategies and optimize campaign performance.',
+  //   image: multichoice,
+  //   linkedin: '#',
+  //   x: '#',
+  //   dribbble: '#',
+  // },
 ];
 
 const OurTeam = () => {

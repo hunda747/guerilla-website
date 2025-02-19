@@ -52,11 +52,11 @@ const Nav = () => {
         <h3>Quick Links</h3>
         <p><Link to="/">Home</Link></p>
         <p><Link to="/works">Works</Link></p>
-        <p><Link to="/contact">Contact Us</Link></p>
-        <p><Link to="/about">About Us</Link></p>
+        <p><Link to="/contact-us">Contact Us</Link></p>
+        <p><Link to="/about-us">About Us</Link></p>
       </div>
       <div className='sticky-footer__nav-section'>
-        <h3>Education</h3>
+        <h3>Social Media</h3>
         <p>Facebook</p>
         <p>LinkedIn</p>
         <p>Twitter</p>
