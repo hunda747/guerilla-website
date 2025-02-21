@@ -31,7 +31,7 @@ const teamMembers = [
     email: 'Papidegu@gmail.com',
   },
   {
-    name: 'Nahum Yele',
+    name: 'Nahum Gebrhale Ayele',
     role: 'BTL coordinator',
     description: 'Nahum coordinates all below-the-line marketing activities.',
     image: nahum,

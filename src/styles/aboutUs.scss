@@ -1,6 +1,5 @@
 @import "./global.scss";
 
-
 .about-us-content {
   // padding: 20px;
   // max-width: 800px;
@@ -29,12 +28,116 @@
   .about-us-text {
     h2 {
       font-size: $headerFont-sm;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: $dark
+      }
     }
 
-    p {
-      font-family: $poppins;
-      margin-bottom: 20px;
-      font-size: $descriptionFont;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+
+      @media (min-width: 968px) {
+        grid-template-columns: 0.8fr 1.2fr;
+        align-items: center;
+      }
+
+      .about-image {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .content-block {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.5rem;
+
+          .icon-wrapper {
+            background: rgba($dark, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            color: $dark;
+            font-size: 1.5rem;
+          }
+
+          p {
+            margin: 0;
+            font-size: $descriptionFont;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .service-pillars {
+      margin-top: 4rem;
+
+      h3 {
+        text-align: center;
+        font-size: $subHeaderFont;
+        margin-bottom: 2rem;
+      }
+
+      .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+
+        .pillar {
+          background: white;
+          padding: 2rem;
+          border-radius: 15px;
+          text-align: center;
+          transition: transform 0.3s ease;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+
+          .pillar-icon {
+            background: rgba($dark, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: $dark;
+            font-size: 1.5rem;
+          }
+
+          h4 {
+            font-size: $paragraphFont;
+            color: black;
+            margin: 0;
+          }
+        }
+      }
     }
   }
 

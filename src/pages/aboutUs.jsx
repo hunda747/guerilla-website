@@ -9,55 +9,90 @@ import { BrandingWatermark } from '@mui/icons-material';
 import { usePageTransition } from '../hooks/usePageTransition';
 import Navbar from '../components/Navbar';
 import Together from '../components/home/together';
+
+
+import safariEventOnCar from '../assets/images/gorilla8.png';
 // Define the AboutUsText component
 const AboutUsText = () => {
   return (
     <div className="containerPaddingBig">
       <div className="about-us-text">
-        <h2>About Us</h2>
-        <p>Gorilla Marketing Plc is a young, fullservice marketing company
-          registered in Ethiopia. We deliver tangible results for a broad diversity
-          of clients nationwide and international. We're experts at introducing
-          modern, unique and innovative marketing techniques to the Ethiopian business landscape, encouraging clients to spend their marketing.
-        </p>
-        <p>
-          With over twelve years of experience, our team boasts unparalleled
-          expertise  in orchestrating and mobilizing thousands of national and
-          international events and activations. We have honed our skills to
-          perfection, ensuring seamless coordination and impeccable execution
-          at every step.
-        </p>
-        <p>
-          Reach Guerilla operates nationwide, we proudly own satellite project offices
-          in key regions. North(Dessie), South(Aribaminch), and East(Dire-dawa). This extensive  network provides comprehensive ground visibility, enabling successful project execution and activations.
-        </p>
-        <p>
-          Looking at clients' needs and wants, we present services that range
-          from the creative conception of events to on-the-ground execution
-          and documentation. With On-the-ground Executions of Brand and
-          Marketing Communications, we strive to drive on-brand Conceptions,
-          Innovation and Reach.
-        </p>
-        {/* <div className="project-pillars">
-        <div className="project-pillar">
-          <div className="icon">
-            <BrandingWatermark />
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          About Us
+        </motion.h2>
+
+        <div className="about-grid">
+          <motion.div
+            className="about-image"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <img src={safariEventOnCar} alt="Marketing team collaboration" />
+          </motion.div>
+
+          <div className="about-content">
+            <motion.div
+              className="content-block"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="icon-wrapper">
+                <i className="fas fa-rocket"></i>
+              </div>
+              <p>Gorilla Marketing Plc is a young, fullservice marketing company registered in Ethiopia. We deliver tangible results for a broad diversity of clients nationwide and international.</p>
+            </motion.div>
+
+            <motion.div
+              className="content-block"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div className="icon-wrapper">
+                <i className="fas fa-chart-line"></i>
+              </div>
+              <p>With over twelve years of experience, our team boasts unparalleled expertise in orchestrating and mobilizing thousands of national and international events and activations.</p>
+            </motion.div>
+
+            <motion.div
+              className="content-block"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <div className="icon-wrapper">
+                <i className="fas fa-globe-africa"></i>
+              </div>
+              <p>Reach Guerilla operates nationwide, with satellite project offices in key regions: North(Dessie), South(Aribaminch), and East(Dire-dawa).</p>
+            </motion.div>
           </div>
-          <p>On-brand Conceptions</p>
         </div>
-        <div className="project-pillar">
-          <div className="icon">
-            <BrandingWatermark />
+
+        <div className="service-pillars">
+          <h3>Our Core Services</h3>
+          <div className="pillar-grid">
+            {['Creative Conception', 'Ground Execution', 'Brand Communications', 'Innovation'].map((pillar, index) => (
+              <motion.div
+                key={pillar}
+                className="pillar"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="pillar-icon">
+                  <i className={`fas fa-${['lightbulb', 'tasks', 'comments', 'rocket'][index]}`}></i>
+                </div>
+                <h4>{pillar}</h4>
+              </motion.div>
+            ))}
           </div>
-          <p>Innovation</p>
         </div>
-        <div className="project-pillar">
-          <div className="icon">
-            <BrandingWatermark />
-          </div>
-          <p>Reach</p>
-        </div>
-      </div> */}
       </div>
     </div>
   );
