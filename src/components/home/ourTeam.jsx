@@ -7,6 +7,8 @@ import { motion, useInView } from 'framer-motion';
 import gmphoto from '../../assets/images/gmimage.jpg';
 import personplaceHolder from '../../assets/images/personplaceHolder.webp';
 import femaleplaceholder from '../../assets/images/femaleplaceholder.webp';
+import nahum from '../../assets/images/nahomimage.jpg';
+import paulos from '../../assets/images/paulosImage.jpg';
 import { Reveal } from '../reveal';
 
 const teamMembers = [
@@ -15,27 +17,27 @@ const teamMembers = [
     role: 'General Manager',
     description: 'Passionate about innovative design and brand storytelling, Alice leads our creative initiatives.',
     image: gmphoto,
+    linkedin: 'https://www.linkedin.com/in/medhane-melesse-salasibew-103234161',
+    x: '#',
+    email: 'medhanemeles@gmail.com',
+  },
+  {
+    name: 'Paulos Degu',
+    role: 'Opration Coordinator',
+    description: 'Paulos is responsible for overseeing the day-to-day operations of the company.',
+    image: paulos,
     linkedin: '#',
     x: '#',
-    dribbble: '#',
+    email: 'Papidegu@gmail.com',
   },
   {
     name: 'Nahum Yele',
-    role: 'Project Manager',
-    description: 'Mark ensures seamless execution of projects, keeping teams aligned and clients satisfied.',
-    image: personplaceHolder,
+    role: 'BTL coordinator',
+    description: 'Nahum coordinates all below-the-line marketing activities.',
+    image: nahum,
     linkedin: '#',
-    x: '#',
-    dribbble: '#',
-  },
-  {
-    name: 'Sophia Lee',
-    role: 'Marketing Strategist',
-    description: 'Sophia crafts compelling marketing strategies that resonate with audiences and drive engagement.',
-    image: femaleplaceholder,
-    linkedin: '#',
-    x: '#',
-    dribbble: '#',
+    x: 'https://x.com/Nahum31949177?t=M3jTqBwuCpOWG20vnsUttw&s=35',
+    email: 'nahomgebrial@gmail.com',
   },
   // {
   //   name: 'James Brown',
@@ -89,9 +91,21 @@ const OurTeam = () => {
             </div>
             <p className="description">{member.description}</p>
             <div className="social-links">
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer"><LinkedIn /></a>
-              <a href={member.x} target="_blank" rel="noopener noreferrer"><Twitter /></a>
-              <a href={member.dribbble} target="_blank" rel="noopener noreferrer"><Email /></a>
+              {member.linkedin !== '#' && (
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                  <LinkedIn />
+                </a>
+              )}
+              {member.x !== '#' && (
+                <a href={member.x} target="_blank" rel="noopener noreferrer">
+                  <Twitter />
+                </a>
+              )}
+              {member.email && (
+                <a href={`mailto:${member.email}`} target="_blank" rel="noopener noreferrer">
+                  <Email />
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
