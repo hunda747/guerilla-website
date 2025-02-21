@@ -22,6 +22,19 @@
   // --brand: #3498db;
 }
 
+/* Override any color scheme preferences */
+@media (prefers-color-scheme: light),
+(prefers-color-scheme: dark) {
+  :root {
+    background-color: #FFC514;
+  }
+
+  body,
+  #root {
+    background-color: #FFC514;
+  }
+}
+
 a {
   font-weight: 500;
   color: $primary-text;
