@@ -8,7 +8,8 @@ import multichoice from '../../assets/images/multichoice.png';
 import safaricom from '../../assets/images/safaricom.png';
 import useMeasure from 'react-use-measure';
 import capitals from '../../assets/images/54capitallogo1.jpg';
-import dachi from '../../assets/images/dachilogo1.png';
+// import dachi from '../../assets/images/dachilogo1.png';
+import dachi from '../../assets/images/Dachiredlogo.png';
 import kerry from '../../assets/images/kerry_logo1.png';
 import niglogo from '../../assets/images/niglogo1.png';
 import wilmar from '../../assets/images/wilmarlogo1.png';
@@ -16,7 +17,7 @@ import awashwine from '../../assets/images/AWASHWINELO.png';
 import unitedbeverages from '../../assets/images/unitedbeverages.png';
 
 const images = [
-  BGI,
+  // BGI,
   Cocacola,
   multichoice,
   safaricom,

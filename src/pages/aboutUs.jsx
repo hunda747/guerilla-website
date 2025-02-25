@@ -73,8 +73,8 @@ const AboutUs = () => {
           <AboutUsText />
           {/* <SuccessMetrics /> */}
           <OurTeam />
-          <Together />
-          {/* <BrandTransform /> */}
+          {/* <Together /> */}
+          <BrandTransform />
           <ContactList />
         </div>
       </div>

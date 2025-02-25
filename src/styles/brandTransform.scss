@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #555;
+  background-color: #333;
   color: white;
   margin: $sectionPaddingHigh 0;
   padding: 42px;
@@ -21,6 +21,7 @@
     p {
       margin-bottom: 20px;
       font-family: $poppins;
+      margin-top: 0;
     }
 
     .buttons {
@@ -43,12 +44,51 @@
         }
       }
     }
+
+    .together-buttons {
+      font-family: $poppins;
+
+      button {
+        font-size: 1.2rem;
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        // background-color: black;
+        color: white;
+        transition: background-color 0.4s;
+
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+
+      .get-started {
+        // background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        transition: background-color 0.4s;
+
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
   }
 
   .image-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: #777;
+    width: 150px;
+    height: 150px;
+    // background-color: #777;
     border-radius: 8px;
+
+    img {
+      width: 100%;
+      // height: 100%;
+      height: auto;
+      object-fit: fit;
+    }
   }
 }
