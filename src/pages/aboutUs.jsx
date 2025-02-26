@@ -15,28 +15,16 @@ const AboutUsText = () => {
     <div className="containerPaddingBig">
       <div className="about-us-text">
         <h2>About Us</h2>
-        <p>Gorilla Marketing Plc is a young, fullservice marketing company
-          registered in Ethiopia. We deliver tangible results for a broad diversity
-          of clients nationwide and international. We're experts at introducing
-          modern, unique and innovative marketing techniques to the Ethiopian business landscape, encouraging clients to spend their marketing.
+        <p>Gorilla Marketing Plc is a dynamic, full-service marketing company based in Ethiopia, dedicated to delivering measurable results for clients both locally and internationally. We specialize in introducing modern, innovative marketing strategies tailored to the Ethiopian business landscape, helping clients maximize their marketing investments.
         </p>
         <p>
-          With over twelve years of experience, our team boasts unparalleled
-          expertise  in orchestrating and mobilizing thousands of national and
-          international events and activations. We have honed our skills to
-          perfection, ensuring seamless coordination and impeccable execution
-          at every step.
+          With over 12 years of experience, our team has successfully planned and executed thousands of national and international events and activations. Our expertise ensures seamless coordination and flawless execution every time.
         </p>
         <p>
-          Reach Guerilla operates nationwide, we proudly own satellite project offices
-          in key regions. North(Dessie), South(Aribaminch), and East(Dire-dawa). This extensive  network provides comprehensive ground visibility, enabling successful project execution and activations.
+          We operate nationwide with satellite offices in key regions—Dessie (North), Arba Minch (South), and Dire Dawa (East)—providing extensive ground visibility and enabling successful project delivery.
         </p>
         <p>
-          Looking at clients' needs and wants, we present services that range
-          from the creative conception of events to on-the-ground execution
-          and documentation. With On-the-ground Executions of Brand and
-          Marketing Communications, we strive to drive on-brand Conceptions,
-          Innovation and Reach.
+          Our services span from creative event conceptualization to on-the-ground execution and documentation. We focus on driving brand innovation, effective communication, and measurable reach for every project.
         </p>
         {/* <div className="project-pillars">
         <div className="project-pillar">

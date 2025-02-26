@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: 'Medhane Melesse',
     role: 'General Manager',
-    description: 'Passionate about innovative design and brand storytelling, Alice leads our creative initiatives.',
+    description: 'A visionary leader with over 12 years of experience, Medhane drives innovative marketing strategies and large-scale event executions, ensuring impactful results for clients across Ethiopia and beyond.',
     image: gmphoto,
     linkedin: 'https://www.linkedin.com/in/medhane-melesse-salasibew-103234161',
     x: '#',
@@ -24,7 +24,7 @@ const teamMembers = [
   {
     name: 'Paulos Degu',
     role: 'Opration Coordinator',
-    description: 'Paulos is responsible for overseeing the day-to-day operations of the company.',
+    description: 'Paulos ensures seamless day-to-day operations, overseeing project execution and resource coordination to maintain the company’s high standards of efficiency and excellence.',
     image: paulos,
     linkedin: '#',
     x: '#',
@@ -33,7 +33,7 @@ const teamMembers = [
   {
     name: 'Nahum Gebrhale Ayele',
     role: 'BTL coordinator',
-    description: 'Nahum coordinates all below-the-line marketing activities.',
+    description: 'Nahum specializes in designing and executing targeted below-the-line marketing campaigns, creating engaging brand experiences that resonate with audiences.',
     image: nahum,
     linkedin: '#',
     x: 'https://x.com/Nahum31949177?t=M3jTqBwuCpOWG20vnsUttw&s=35',
