@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import '../../styles/example.scss';
 
@@ -13,6 +13,10 @@ import eastAfricaTigersEvent from '../../assets/images/gorilla5.webp';
 
 import maltaGroupEvent from '../../assets/images/gorilla26.jpg';
 import cocacolaEvent from '../../assets/images/gorilla3.webp';
+import LazyImage from "../common/LazyImage";
+
+// Placeholder SVG for lazy loading
+const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' width='300' height='200'%3E%3Crect width='300' height='200' fill='%23cccccc'/%3E%3C/svg%3E";
 
 const cards = [
   {
@@ -108,6 +112,63 @@ const HorizontalScrollCarousel = () => {
   );
 };
 
+// LazyBackgroundImage component for background images
+const LazyBackgroundImage = ({ src, children, className, style }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(placeholderImage);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    // Create a new IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // If the element is in the viewport
+          if (entry.isIntersecting) {
+            // Load the image
+            const img = new Image();
+            img.src = src;
+            img.onload = () => {
+              setCurrentSrc(src);
+              setIsLoaded(true);
+              // Disconnect the observer once the image is loaded
+              observer.disconnect();
+            };
+          }
+        });
+      },
+      { rootMargin: '100px' }
+    );
+
+    // Observe the element
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    // Clean up
+    return () => {
+      observer.disconnect();
+    };
+  }, [src]);
+
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        ...style,
+        backgroundImage: `url(${currentSrc})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        transition: 'opacity 0.3s ease-in-out',
+        opacity: isLoaded ? 1 : 0.5,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 const Card = ({ card }) => {
   const navigate = useNavigate();
   return (
@@ -116,14 +177,10 @@ const Card = ({ card }) => {
       className="card"
       onClick={() => navigate('/works')}
     >
-      <div
-        style={{
-          backgroundImage: `url(${card.url})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+      <LazyBackgroundImage
+        src={card.url}
         className="card-image"
-      ></div>
+      />
       <div className="card-content">
         <h3 className="card-title">{card.title}</h3>
         <p className="card-description">{card.description}</p>

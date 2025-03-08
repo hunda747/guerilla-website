@@ -15,6 +15,7 @@ import niglogo from '../../assets/images/niglogo1.png';
 import wilmar from '../../assets/images/wilmarlogo1.png';
 import awashwine from '../../assets/images/AWASHWINELO.png';
 import unitedbeverages from '../../assets/images/unitedbeverages.png';
+import LazyImage from '../common/LazyImage';
 
 const images = [
   // BGI,
@@ -59,7 +60,12 @@ const TrustedBrand = () => {
           {
             [...images, ...images].map((image, index) => (
               <div className="img-wrapper" key={index}>
-                <img src={image} alt="Webflow" className="trusted-brand__image" />
+                <LazyImage
+                  src={image}
+                  alt="Brand Logo"
+                  className="trusted-brand__image"
+                  placeholderSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50' width='100' height='50'%3E%3Crect width='100' height='50' fill='%23f0f0f0'/%3E%3C/svg%3E"
+                />
               </div>
             ))
           }

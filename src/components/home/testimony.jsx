@@ -5,6 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import kerry from '../../assets/images/kerry_logo1.png';
 import berry from '../../assets/images/berrylogo.png';
 import dachi from '../../assets/images/Dachiredlogo.png';
+import LazyImage from '../common/LazyImage';
 
 const Testimony = () => {
   const testimonies = [
@@ -72,7 +73,12 @@ const SingleTestimony = ({ quote, name, title }) => {
           ))} "
         </motion.blockquote>
         <div className="testimony__author">
-          <img src={dachi} alt="dachi" className="testimony__logo" />
+          <LazyImage
+            src={dachi}
+            alt="dachi"
+            className="testimony__logo"
+            placeholderSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50' width='100' height='50'%3E%3Crect width='100' height='50' fill='%23f0f0f0'/%3E%3C/svg%3E"
+          />
           <div className="testimony__info">
             <p className="testimony__name">{name}</p>
             {/* <p className="testimony__title">{title}</p> */}

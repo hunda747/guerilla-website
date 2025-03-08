@@ -23,7 +23,16 @@ const MarketingCTA = () => {
           </div>
         </div>
         <div className="cta-content">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.8469058217551!2d38.79661359744628!3d9.018620349333546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8568f92b6a39%3A0xa25529ab536bd064!2s2Q9W%2BGQ3%20Admas%20University%20College%2C%20Addis%20Ababa!5e1!3m2!1sen!2set!4v1739970081360!5m2!1sen!2set" className='cta-map' style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d934.8469058217551!2d38.79661359744628!3d9.018620349333546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8568f92b6a39%3A0xa25529ab536bd064!2s2Q9W%2BGQ3%20Admas%20University%20College%2C%20Addis%20Ababa!5e1!3m2!1sen!2set!4v1739970081360!5m2!1sen!2set"
+            className='cta-map'
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Guerilla Marketing Office Location"
+            aria-label="Map showing Guerilla Marketing office location in Addis Ababa"
+          ></iframe>
         </div>
       </div>
     </div>

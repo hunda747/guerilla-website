@@ -12,6 +12,7 @@ import { Reveal } from "../reveal";
 import FullNavbar from '../fullNavbar';
 import { ArrowDownward } from "@mui/icons-material";
 import Magnetic from '../common/Magnetic';
+import LazyImage from '../common/LazyImage';
 
 const HeroCenter = () => {
   return (
@@ -19,8 +20,8 @@ const HeroCenter = () => {
       {/* <p>Hello we are</p> */}
       <nav className="hero-text__nav">
         <div className="logo-container">
-          <img src={logo} alt="Logo" className="logo-image" />
-          <img src={logot} alt="Logo" className="logo-image" />
+          <LazyImage src={logo} alt="Logo" className="logo-image" />
+          <LazyImage src={logot} alt="Logo" className="logo-image" />
         </div>
         <div className="hero-text__nav-links">
           <FullNavbar />
@@ -55,7 +56,11 @@ const HeroCenter = () => {
           </Magnetic>
         </div>
         <div className="hero-image">
-          <img src={heroImage} alt="Hero Image" />
+          <LazyImage
+            src={heroImage}
+            alt="Hero Image"
+          // placeholderSrc="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200' width='300' height='200'%3E%3Crect width='300' height='200' fill='%23cccccc'/%3E%3C/svg%3E"
+          />
         </div>
       </div>
     </section>

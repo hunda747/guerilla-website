@@ -4,10 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 
 import logo from '../assets/images/gorillalogo.png';
 import FullNavbar from './fullNavbar';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,7 +18,7 @@ const Navbar = () => {
   return (
     <div className="containerPaddingBig">
       <nav className="navbar ">
-        <div className="logo">
+        <div className="logo" onClick={() => navigate('/')}>
           <img src={logo} alt="Logo" className="logo-image" />
           <span className="logo-text">GUERILLA</span>
         </div>
