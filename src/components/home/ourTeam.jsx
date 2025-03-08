@@ -80,8 +80,8 @@ const OurTeam = () => {
           <motion.div
             className="team-member"
             key={index}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.98 }}
 
           >
             <img src={member.image} alt={member.name} className="member-image" />

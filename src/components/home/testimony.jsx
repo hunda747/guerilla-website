@@ -4,11 +4,12 @@ import { motion, useInView } from 'framer-motion';
 
 import kerry from '../../assets/images/kerry_logo1.png';
 import berry from '../../assets/images/berrylogo.png';
+import dachi from '../../assets/images/Dachiredlogo.png';
 
 const Testimony = () => {
   const testimonies = [
     // { quote: "Guerrilla's expertise in BTL marketing significantly boosted our campaign results. Their strategic approach and seamless execution made a remarkable impact on our brand!", name: "Hanno Tegenu", title: "General Manager, Human Advertising PLC" },
-    { quote: "Guerrilla Marketing PLC's innovative activations and customer-focused strategies enhanced our brand engagement and market reach. Their professionalism and execution are unmatched.", name: "Berry Advertising PLC", title: "Berry Advertising PLC" },
+    { quote: "Guerrilla Marketing PLC's innovative activations and customer-focused strategies enhanced our brand engagement and market reach. Their professionalism and execution are unmatched.", name: "Dachi Manufacturing Company", title: "Dachi Manufacturing Company" },
   ]
   return (
     <div className="testimony-container">
@@ -71,7 +72,7 @@ const SingleTestimony = ({ quote, name, title }) => {
           ))} "
         </motion.blockquote>
         <div className="testimony__author">
-          <img src={berry} alt="berry" className="testimony__logo" />
+          <img src={dachi} alt="dachi" className="testimony__logo" />
           <div className="testimony__info">
             <p className="testimony__name">{name}</p>
             {/* <p className="testimony__title">{title}</p> */}
