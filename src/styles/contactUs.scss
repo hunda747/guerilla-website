@@ -169,3 +169,32 @@
     }
   }
 }
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optional: Style the disabled button */
+.send-message:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

@@ -13,6 +13,8 @@ const ContactUs = () => {
     phone: '',
     message: ''
   });
+  // Add loading state
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Handle input change
   const handleChange = (e) => {
@@ -23,6 +25,8 @@ const ContactUs = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Set loading state to true
+    setIsSubmitting(true);
 
     // Send data to EmailJS here
     emailjs.sendForm(
@@ -41,10 +45,13 @@ const ContactUs = () => {
           message: ''
         });
         alert('Message sent successfully');
+        // Reset loading state
+        setIsSubmitting(false);
       }, (err) => {
         console.log(err);
-
         console.log('FAILED...', err);
+        // Reset loading state even on error
+        setIsSubmitting(false);
       });
   };
 
@@ -84,7 +91,15 @@ const ContactUs = () => {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" placeholder="Leave us a message..." rows="5" value={formData.message} onChange={handleChange} required></textarea>
               </div>
-              <button type="submit" className="send-message">Send message</button>
+              <button type="submit" className="send-message" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <span className="loading-spinner">
+                    <span className="spinner"></span> Sending...
+                  </span>
+                ) : (
+                  'Send message'
+                )}
+              </button>
             </form>
           </div>
           <div className="contact-info">
