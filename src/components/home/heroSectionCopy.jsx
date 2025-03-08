@@ -28,7 +28,6 @@ const HeroCenter = () => {
         </div>
       </nav>
       <div className="hero-text__container">
-
         <div className="hero-text">
           <div className="hero-text-description">
             <div className="hero-text__title">

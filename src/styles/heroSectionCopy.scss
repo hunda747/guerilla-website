@@ -34,7 +34,7 @@
     margin: 0 auto;
     max-width: 1150px;
 
-    @media (max-width: 1082px) {
+    @media (max-width: 1182px) {
       padding: 0 1.5rem;
     }
 
@@ -74,7 +74,7 @@
     width: 100%;
     // padding: 0 1rem;
 
-    @media (max-width: 1082px) {
+    @media (max-width: 1182px) {
       padding: 0 1.5rem;
     }
 
@@ -263,5 +263,4 @@
       object-fit: fit;
     }
   }
-
 }
